@@ -1,0 +1,25 @@
+server:
+  port: 8300
+
+spring:
+  application:
+    name: students-demo
+
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/student_demo?createDatabaseIfNotExist=true
+    password: root123
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+
+logging:
+  file:
+    name: ./logs/${spring.application.name}.log
+
+
+
